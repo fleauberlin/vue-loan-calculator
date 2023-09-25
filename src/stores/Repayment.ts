@@ -12,7 +12,7 @@ export const useRepayment = defineStore('repayment', () => {
     error.value = null;
     loading.value = true;
     axios({
-      url: `${import.meta.env.VITE_API_URL}/q/`,
+      url: `${import.meta.env.VITE_API_URL}`,
       method: 'POST',
       data: {
         query: `{

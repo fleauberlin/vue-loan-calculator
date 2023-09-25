@@ -5,6 +5,8 @@ Submitted by Florian Hollm - florian.hollm@googlemail.com
 1. Rename `.env.example` to `.env`
 2. Replace `https://example.com` with your api url in the `.env` file.
 
+If your GraphQL path is for example `/q`, please make sure to include `/q/` in the environment variable.
+
 Note: Make sure your frontend has access to the backend resource by either setting your hosts accordingly, setting up a proxy or disabling cors in your browser.
 
 ## Install dependencies

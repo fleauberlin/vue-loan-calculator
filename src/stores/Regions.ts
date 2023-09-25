@@ -21,7 +21,7 @@ export const useRegions = defineStore('regions', () => {
 
   const getCityTax = async () => {
     axios({
-      url: `${import.meta.env.VITE_API_URL}/q/`,
+      url: `${import.meta.env.VITE_API_URL}`,
       method: 'POST',
       data: {
         mutations: `{
@@ -34,7 +34,7 @@ export const useRegions = defineStore('regions', () => {
 
   const getBrokerTax = async () => {
     axios({
-      url: `${import.meta.env.VITE_API_URL}/q/`,
+      url: `${import.meta.env.VITE_API_URL}`,
       method: 'POST',
       data: {
         mutations: `{
