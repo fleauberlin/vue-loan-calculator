@@ -19,6 +19,10 @@ const inputErrors: ComputedRef<InputError[]> = computed(() => {
     message: 'Property price is required.',
     condition: !property_price.value
   },
+  {
+    message: 'Total savings can not be greater than the property price..',
+    condition: property_price?.value < total_savings?.value
+  },
   // Temporarily removed because savings could be optional
   // {
   //   message: 'Total savings are required.',

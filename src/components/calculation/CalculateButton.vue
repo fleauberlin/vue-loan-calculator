@@ -11,7 +11,7 @@
 			{{ !!calculated ? "Re-calculate" : "Calculate" }}
 		</button>
 		<a href="javascript:void(0)" class="default-link" v-if="!!calculated" @click="clear">Clear calculation</a>
-		<InputValidation v-if="inputErrorsVisible"></InputValidation>
+		<InputValidation v-if="inputErrorsVisible || !!total_savings"></InputValidation>
 		<div class="text-orange-600" v-if="!!error">
 		<span>{{ error }}&nbsp;</span>
 			<a class="underline" href="javascript:void(0)" @click="calculate()">Try again</a>
@@ -28,7 +28,7 @@ import { useRepayment } from '../../stores/Repayment';
 const { calculate, clearCalculation } = useCalculation();
 const { clearRepayment } = useRepayment();
 const { error } = toRefs(useRepayment());
-const { property_price, annual_repayment_rate, calculated } = toRefs(useCalculation());
+const { property_price, annual_repayment_rate, calculated, total_savings } = toRefs(useCalculation());
 
 const inputErrorsVisible: Ref<boolean> = ref(false);
 
