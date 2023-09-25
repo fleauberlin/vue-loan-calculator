@@ -25,7 +25,3 @@ Run `yarn install` or `npm install` in the root directory.
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 Run `yarn test:unit` or `npm run test:unit` in the root directory.
-
-```sh
-yarn test:unit
-```
